@@ -89,7 +89,7 @@ if st.button("📊 Dự đoán"):
         #poly = PolynomialFeatures(degree=2)
         #input_scaled = poly.fit_transform(input_scaled)
     # Dự đoán
-    prediction = model.predict(input_scaled)[0]
+    #prediction = model.predict(input_scaled)[0]
 
     # Tính xác suất nếu model hỗ trợ
     proba = model.predict_proba(input_scaled)[0][1] if hasattr(model, "predict_proba") else None
@@ -102,4 +102,5 @@ if st.button("📊 Dự đoán"):
 
     if proba is not None:
         st.write(f"🎯 Xác suất đăng ký: **{proba:.2%}**")
+
 
