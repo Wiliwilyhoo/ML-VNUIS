@@ -92,7 +92,7 @@ if st.button("📊 Dự đoán"):
     #prediction = model.predict(input_scaled)[0]
 
     # Tính xác suất nếu model hỗ trợ
-    proba = model.predict_proba(input_scaled)[0][1] if hasattr(model, "predict_proba") else None
+    #proba = model.predict_proba(input_scaled)[0][1] if hasattr(model, "predict_proba") else None
 
     # Hiển thị kết quả
     if prediction == 1:
@@ -102,5 +102,6 @@ if st.button("📊 Dự đoán"):
 
     if proba is not None:
         st.write(f"🎯 Xác suất đăng ký: **{proba:.2%}**")
+
 
 
